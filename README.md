@@ -23,7 +23,7 @@ sudo mv ./note /usr/local/bin/
 ```nix
 {
     inputs.note = {
-        url = "https://github.com/NewDawn0/note.git";
+        url = "github:NewDawn0/note.git";
         inputs.nixpkgs.follows = "nixpkgs";
         # Optional: If you use nix-systems
         inputs.nix-systems.follows = "nix-systems"
