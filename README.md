@@ -8,6 +8,7 @@ A simple note taking utility for temporary notes
     * [Using Nix](#using-nix)
         * [To just test it out](#to-just-test-it-out)
         * [If you a flake system config](#if-you-a-flake-system-config)
+* [Usage](#usage)
 
 <!-- vim-markdown-toc -->
 
@@ -42,4 +43,20 @@ nix run https://github.com/NewDawn0/note.git
 (final: prev: {
     note = inputs.note.packages.${prev.system}.default;
 })
+```
+
+## Usage
+```bash
+# This will open a new note markdown in your $EDITOR
+note
+
+# Use note --help to see all the use cases
+# Output of note --help
+Usage of note:
+  -args string
+    	Text editor arguments used
+  -ed string
+    	Text editor used : (If unset $EDITOR is used) (default "nvim")
+  -ext string
+    	File extension of the note (default "md")
 ```
