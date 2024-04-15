@@ -6,8 +6,6 @@ A simple note taking utility for temporary notes
 * [Installation](#installation)
     * [Building from source using Go](#building-from-source-using-go)
     * [Using Nix](#using-nix)
-        * [To just test it out](#to-just-test-it-out)
-        * [If you a flake system config](#if-you-a-flake-system-config)
 * [Usage](#usage)
 
 <!-- vim-markdown-toc -->
@@ -21,11 +19,6 @@ go build
 sudo mv ./note /usr/local/bin/
 ```
 ### Using Nix
-#### To just test it out
-```bash
-nix run https://github.com/NewDawn0/note.git
-```
-#### If you a flake system config
 1. Add it as an input to your system flake as follows
 ```nix
 {
