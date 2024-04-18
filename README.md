@@ -33,7 +33,7 @@ nix profile install .
   inputs = {
     # Your other inputs ...
     note = {
-      url = "github:NewDawn0/note.git";
+      url = "github:NewDawn0/note";
       inputs.nixpkgs.follows = "nixpkgs";
       # Optional: If you use nix-systems
       inputs.nix-systems.follows = "nix-systems"
