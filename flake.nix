@@ -18,6 +18,7 @@
             vendorHash = "sha256-kzMvksDjhqKlHvBwl0spOApFKHKM7lm0WG2hifP6+Ro=";
             meta = with pkgs.lib; {
               description = "A tool for taking temporary notes";
+              homepage = "https://github.com/NewDawn0/note";
               maintainers = with maintainers; [ "NewDawn0" ];
               license = licenses.mit;
             };
