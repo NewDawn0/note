@@ -9,6 +9,8 @@
   outputs = { self, nixpkgs, ... }@inputs:
     let eachSystem = nixpkgs.lib.genAttrs (import inputs.nix-systems);
     in {
+      overlays.default =
+        (final: prev: { note = self.packages.${prev.system}.default; });
       packages = eachSystem (system:
         let pkgs = nixpkgs.legacyPackages.${system};
         in {
