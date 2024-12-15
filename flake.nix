@@ -15,14 +15,20 @@
         let pkgs = nixpkgs.legacyPackages.${system};
         in {
           default = pkgs.buildGoModule {
-            name = "note";
+            pname = "note";
+            version = "1.0.0";
             src = ./.;
             vendorHash = "sha256-kzMvksDjhqKlHvBwl0spOApFKHKM7lm0WG2hifP6+Ro=";
-            meta = with pkgs.lib; {
-              description = "A tool for taking temporary notes";
+            meta = {
+              description = "A lightweight tool for capturing short-term notes";
+              longDescription = ''
+                This tool is designed for quick note-taking.
+                It's perfect for jotting down temporary ideas or reminders from the command line without leaving any clutter.
+              '';
               homepage = "https://github.com/NewDawn0/note";
-              maintainers = with maintainers; [ NewDawn0 ];
-              license = licenses.mit;
+              license = pkgs.lib.licenses.mit;
+              maintainers = with pkgs.lib.maintainers; [ NewDawn0 ];
+              platforms = pkgs.lib.platforms.all;
             };
           };
         });
